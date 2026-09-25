@@ -80,38 +80,59 @@ Provide 6 warm-up options:
 Let them pick one, then describe the exercises briefly.
 
 ### 3. Song Selection
-After warm-up (or if skipped), suggest a song from this curated list:
+After warm-up (or if skipped), randomly select from this expanded pool of intermediate acoustic songs:
 
 **TIER 1** (Similar difficulty to Nutshell/Lovesong):
-- Pink Floyd - Wish You Were Here (fingerpicking + simple chords)
-- Radiohead - Creep (intermediate strumming + barre chords)
-- Elliott Smith - Between the Bars (fingerpicking, mellow)
-- Bon Iver - Holocene (fingerpicking pattern focus)
-- Nick Drake - Northern Sky (fingerpicking, beautiful)
-- Joni Mitchell - Both Sides Now (fingerpicking, classic)
-- Iron & Wine - Naked As We Came (fingerpicking, intimate)
+- Pink Floyd - Wish You Were Here
+- Radiohead - Creep
+- Elliott Smith - Between the Bars
+- Bon Iver - Holocene
+- Nick Drake - Northern Sky
+- Joni Mitchell - Both Sides Now
+- Iron & Wine - Naked As We Came
+- Paul Simon - The Boxer
+- Fleetwood Mac - Landslide
+- Kansas - Dust in the Wind
+- The Beatles - Here Comes the Sun
+- Fleetwood Mac - Landslide
+- Ben Folds Five - The Luckiest
+- Ryan Adams - Come Pick Me Up
+- John Mayer - Slow Dancing in a Burning Room (acoustic)
 
 **TIER 2** (Slightly harder - build toward this):
-- Finger Eleven - Parasite Eve (more complex strumming)
-- Metallica - Fade to Black (acoustic section focus)
-- Queens of the Stone Age - No One Knows (rhythm focus)
-- Rage Against the Machine - Killing in the Name (percussive acoustic)
-- Gnome - Flightless Bird, American Mouth (fingerpicking)
+- Finger Eleven - Parasite Eve
+- Metallica - Fade to Black
+- Queens of the Stone Age - No One Knows
+- Rage Against the Machine - Killing in the Name
+- Gnome - Flightless Bird, American Mouth
+- Eric Clapton - Layla (acoustic)
+- Jeff Beck - Cause We've Ended as Lovers
 
-Pick one that matches their mood/what they'd enjoy.
+**IMPORTANT:** Do NOT use the hardcoded song lists above. Instead:
+1. Randomly pick 3 songs from the combined TIER 1 & TIER 2 pools
+2. For each song, search the internet for real, current resources
+3. Find 3 fresh resources per song: Ultimate Guitar tab, YouTube acoustic tutorial, and chord reference
+4. Present them fresh each time the user runs the skill
 
 ### 4. Provide Resources
-For each song, provide exactly 3 resources:
+For each song, provide exactly 3 resources by searching the internet:
 
+1. **Search for Ultimate Guitar tabs** - Use WebSearch to find the actual tab URL
+2. **Search for YouTube acoustic tutorials** - Find a real, current tutorial link
+3. **Search for chord diagrams** - Find chord reference links
+
+Format for each song:
 ```
 **Song: [NAME]**
 Difficulty: [Level]
 Focus: [What they'll learn - fingerpicking/strumming/barre chords/etc]
 
-Option 1 - Tab: https://tabs.ultimate-guitar.com/tab/[artist-song-tabs]
-Option 2 - YouTube: [Link to acoustic tutorial]
-Option 3 - Chord Diagram: [Link to chord reference]
+Option 1 - Tab: [Actual Ultimate Guitar URL found via search]
+Option 2 - YouTube: [Actual YouTube tutorial URL found via search]
+Option 3 - Chord Diagram: [Actual chord reference URL found via search]
 ```
+
+**CRITICAL:** Use WebSearch to find REAL, CURRENT resources. Never hardcode or guess URLs.
 
 ### 5. Handle Feedback
 - **"Yes"** → Confirm and ask if they want tips before starting
@@ -123,10 +144,12 @@ Option 3 - Chord Diagram: [Link to chord reference]
 Encourage them and remind them that consistency beats perfection. Suggest they run `/guitar-lesson` daily.
 
 ## IMPORTANT RULES:
-- ALWAYS prioritize Ultimate Guitar (tabs.ultimate-guitar.com) for tabs
+- **RANDOMIZE SONG SELECTION** - Pick 3 random songs from the pool each time. Never repeat the same song twice in a row. Variety is essential.
+- **USE WEBSEARCH FOR RESOURCES** - Every time you suggest a song, search the internet for fresh, current resources. Do NOT use hardcoded or guessed URLs.
+- ALWAYS prioritize Ultimate Guitar (tabs.ultimate-guitar.com) for tabs via search results
 - ALWAYS find acoustic tutorials - no electric unless absolutely unavoidable
 - NEVER suggest songs outside their skill level
-- ALWAYS provide 3 resource options (tab, video, chord diagram/reference)
+- ALWAYS provide 3 resource options (tab, video, chord diagram/reference) with real URLs
 - Accept ALL feedback gracefully and provide alternatives without complaint
 - Keep responses conversational and encouraging
 - Remember: they have a Fender acoustic (full-sized), no electric tutorials
